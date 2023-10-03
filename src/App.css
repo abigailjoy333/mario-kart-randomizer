@@ -43,7 +43,7 @@ h3 {
     white-space: nowrap;
     font-size: 3vw;
     max-width: 100%;
-    vertical-align: bottom;
+    margin-bottom: 0%;
 }
   
 button {
