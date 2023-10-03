@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="wrapper">
       <h1 className="rainbow-letters">MARIO KART 8 DELUXE COURSE RANDOMIZER</h1>
-      <h3>you're gonna play:</h3>
+      <h3>you're gonna race:</h3>
       <h2 className="course">★ {course} ★</h2>
       <div>
         <button onClick={handleClick}>
