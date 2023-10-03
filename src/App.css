@@ -5,9 +5,10 @@ html {
 .wrapper {
     padding: 20px;
     text-align: center;
-    color: mistyrose;
+    color: ivory;
     vertical-align: top;
     font-family: 'Trebuchet MS', Arial, sans-serif;
+    max-width: 100%;
 }
 
 .rainbow-letters {
@@ -26,6 +27,20 @@ html {
     padding: 30px;
     backdrop-filter: blur;
     color: yellow;
+    white-space: nowrap;
+    font-size: 3vw;
+}
+
+h1 {
+    white-space: nowrap;
+    font-size: 4vw;
+    max-width: 100%;
+}
+
+h3 {
+    white-space: nowrap;
+    font-size: 3vw;
+    max-width: 100%;
 }
   
 button {
@@ -34,13 +49,16 @@ button {
     padding: 10px 20px;
     border-radius: 25px;
     border: none;
-    font-size: 16px;
+    font-size: 3vw;
     cursor: pointer;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     font-weight: bold;
 }
-  
-button:hover {
-    background-color: mistyrose;
-    box-shadow: 0 0 5px 5px ivory;
+
+@media (hover: hover) {
+    button:hover {
+        background-color: rgb(255, 115, 255);
+        box-shadow: 0 0 5px 5px pink;
+        color: ivory;
+    }
 }
