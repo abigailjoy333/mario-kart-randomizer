@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import "./App.css"
+import courseList from "./courseList"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  const [course, setCourse] = useState('');
+  
+  const randomCourse = () => {
+    return courseList[Math.floor(Math.random() * courseList.length)]
+  }
 
+  const handleClick = () => {
+    setCourse(randomCourse(courseList))
+  }
+  
+  return (
+    <div className="wrapper">
+      <h1 className="rainbow-letters">MARIO KART 8 DELUXE COURSE RANDOMIZER</h1>
+      <h3>you're gonna play:</h3>
+      <h2 className="course">★ {course} ★</h2>
+      <div>
+        <button onClick={handleClick}>
+          generate new course
+        </button>
+      </div>
+    </div>
+  )
+}
+  
 export default App;
